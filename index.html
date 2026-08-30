@@ -3,34 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ujjwal Kumar Portfolio</title>
-    <!-- Bootstrap 5 CSS -->
+    <title>Ujjwal Kumar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
     <style>
-        /* Strict Monochrome Theme Rules */
         :root {
             --bg-main: #000000;
             --text-main: #ffffff;
             --text-muted: #a0a0a0;
             --border-color: #333333;
         }
-
         body {
             background-color: var(--bg-main);
             color: var(--text-main);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
         }
-
-        /* Typography & Custom Elements */
         h1, h2, h3, h4, .navbar-brand {
             font-weight: 700;
             letter-spacing: -0.5px;
         }
-
         .section-title {
             text-transform: uppercase;
             font-size: 0.85rem;
@@ -40,25 +33,19 @@
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 0.5rem;
         }
-
-        /* Navbar Styling */
         .navbar {
             background-color: rgba(0, 0, 0, 0.95);
             border-bottom: 1px solid var(--border-color);
             backdrop-filter: blur(10px);
         }
-
         .nav-link {
             color: var(--text-muted) !important;
             transition: color 0.2s ease;
             font-size: 0.9rem;
         }
-
         .nav-link:hover, .nav-link.active {
             color: var(--text-main) !important;
         }
-
-        /* Cards & Containers */
         .bw-card {
             background-color: #000000;
             border: 1px solid var(--border-color);
@@ -67,12 +54,9 @@
             height: 100%;
             transition: border-color 0.3s ease;
         }
-
         .bw-card:hover {
             border-color: #ffffff;
         }
-
-        /* Badges / Tech Tags */
         .bw-badge {
             background-color: transparent;
             color: var(--text-main);
@@ -123,19 +107,13 @@
             background-color: var(--text-main);
             border-radius: 50%;
         }
-
         .text-muted-custom {
             color: var(--text-muted) !important;
-        }
-
-        footer {
-            border-top: 1px solid var(--border-color);
         }
     </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar">
 
-    <!-- Navigation -->
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand text-white" href="#">UJJWAL KUMAR</a>
@@ -144,37 +122,26 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero / About Section -->
     <section id="about" class="min-vh-100 d-flex align-items-center pt-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-10">
-                    <p class="text-muted-custom mb-2">DATA SCIENCE AND MACHINE LEARNING ENGINEER</p>
-                    <h1 class="display-3 mb-4">Building intelligent systems through Machine Learning, Deep Learning, and Data Pipelines.</h1>
+                    <p class="text-muted-custom mb-2">SOFTWARE ENGINEER</p>
+                    <h1 class="display-3 mb-4">Building full stack website and bridging gap between software engineering and AI.</h1>
                     <p class="lead text-muted-custom mb-4 style="max-width: 650px;">
-                        Based in New Delhi, India. Passionate about leveraging data and machine learning to construct robust predictive models, scalable AI solutions, and full-stack software applications.
+                        Based in New Delhi, India. Hands-on experience in Java and building full-stack software applications with scalable AI solutions.
                     </p>
-                    <div class="d-flex gap-3 flex-wrap align-items-center">
-                        <a href="#projects" class="btn-bw-outline">View Projects</a>
-                        <a href="#contact" class="btn-bw-outline">Contact Me</a>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience" class="py-5">
         <div class="container py-4">
             <div class="section-title">01. Experience</div>
@@ -245,13 +212,11 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="py-5">
         <div class="container py-4">
             <div class="section-title">02. Selected Projects</div>
             <div class="row g-4">
                 
-                <!-- Project 1 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="bw-card d-flex flex-column justify-content-between">
                         <div>
@@ -260,19 +225,10 @@
                                 <a href="https://github.com/ujjwalkumar14b/Product_Recommendation_System" class="text-white text-decoration-none" title="View Code"><i class="bi bi-code-slash fs-4"></i></a>
                             </div>
                             <h3 class="h5 mb-2">Product Recommendation System</h3>
-                            <p class="text-muted-custom small mb-4">
-                                B.Tech final year capstone project engineered using collaborative and content-based filtering techniques to personalize user product recommendations.
-                            </p>
-                        </div>
-                        <div>
-                            <span class="bw-badge">Python</span>
-                            <span class="bw-badge">Scikit-Learn</span>
-                            <span class="bw-badge">Pandas</span>
+                            <p class="text-muted-custom small mb-4">B.Tech final year capstone project engineered using collaborative and content-based filtering techniques to personalize user product recommendations.</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 2 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="bw-card d-flex flex-column justify-content-between">
                         <div>
@@ -281,20 +237,10 @@
                                 <a href="https://github.com/ujjwalkumar14b/Data_Science_Project" class="text-white text-decoration-none" title="View Code"><i class="bi bi-code-slash fs-4"></i></a>
                             </div>
                             <h3 class="h5 mb-2">Financial Report Chatbot (PDF RAG)</h3>
-                            <p class="text-muted-custom small mb-4">
-                                Retrieval-Augmented Generation chatbot built with LangChain, FAISS, Hugging Face embeddings, and LLMs to answer queries from unstructured PDF documents.
-                            </p>
-                        </div>
-                        <div>
-                            <span class="bw-badge">LangChain</span>
-                            <span class="bw-badge">FAISS</span>
-                            <span class="bw-badge">LLMs</span>
+                            <p class="text-muted-custom small mb-4">Retrieval-Augmented Generation chatbot built with LangChain, FAISS, Hugging Face embeddings, and LLMs to answer queries from unstructured PDF documents.</p>
                         </div>
                     </div>
                 </div>
-
-
-                <!-- Project 4 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="bw-card d-flex flex-column justify-content-between">
                         <div>
@@ -303,18 +249,11 @@
                                 <a href="https://github.com/ujjwalkumar14b/Data_Science_Project" class="text-white text-decoration-none" title="View Code"><i class="bi bi-code-slash fs-4"></i></a>
                             </div>
                             <h3 class="h5 mb-2">Credit Card Fraud Detection</h3>
-                            <p class="text-muted-custom small mb-4">
-                                Supervised ML models trained on highly imbalanced financial transaction data to identify fraudulent activity and classify applicant default probability.
-                            </p>
-                        </div>
-                        <div>
-                            <span class="bw-badge">Machine Learning</span>
-                            <span class="bw-badge">Imbalanced Data</span>
+                            <p class="text-muted-custom small mb-4">Supervised ML models trained on highly imbalanced financial transaction data to identify fraudulent activity and classify applicant default probability.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 5 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="bw-card d-flex flex-column justify-content-between">
                         <div>
@@ -323,14 +262,7 @@
                                 <a href="https://github.com/ujjwalkumar14b/Data_Science_Project" class="text-white text-decoration-none" title="View Code"><i class="bi bi-code-slash fs-4"></i></a>
                             </div>
                             <h3 class="h5 mb-2">Trader Sentiment Analysis</h3>
-                            <p class="text-muted-custom small mb-4">
-                                NLP model analyzing trader discussions and activity to classify sentiment into bullish, bearish, and neutral categories to uncover market patterns.
-                            </p>
-                        </div>
-                        <div>
-                            <span class="bw-badge">NLP</span>
-                            <span class="bw-badge">Python</span>
-                            <span class="bw-badge">Text Mining</span>
+                            <p class="text-muted-custom small mb-4">NLP model analyzing trader discussions and activity to classify sentiment into bullish, bearish, and neutral categories to uncover market patterns.</p>
                         </div>
                     </div>
                 </div>
@@ -339,7 +271,6 @@
         </div>
     </section>
 
-    <!-- Technical Skills Section -->
     <section id="skills" class="py-5">
         <div class="container py-4">
             <div class="section-title">03. Technical Skills</div>
@@ -382,7 +313,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="col-md-6 col-lg-3">
                     <div class="bw-card">
                         <h4 class="h6 text-white mb-3 text-uppercase">Tools</h4>
@@ -397,7 +327,6 @@
         </div>
     </section>
 
-    <!-- Education Section -->
     <section id="education" class="py-5">
         <div class="container py-4">
             <div class="section-title">04. Education</div>
@@ -431,7 +360,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="py-5">
         <div class="container py-4">
             <div class="section-title">05. Contact</div>
@@ -463,15 +391,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="py-4 text-center text-muted-custom">
-        <div class="container">
-            <small>&copy; Ujjwal Kumar</small>
-        </div>
-    </footer>
-
-    <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
