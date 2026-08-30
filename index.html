@@ -3,121 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ujjwal Kumar</title>
+    <title>Ujjwal Kumar | Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfcfc;
+            color: #212529;
+        }
+        .card {
+            border: 1px solid #eaeaea;
+            border-radius: 12px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05) !important;
+        }
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #f8f9fa;
+            color: #212529;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .social-btn:hover {
+            background-color: #212529;
+            color: #ffffff;
+        }
+        .badge-skill {
+            font-weight: 500;
+            background-color: #f1f3f5;
+            color: #343a40;
+            border: 1px solid #e9ecef;
+        }
+    </style>
 </head>
-<body class="bg-white text-dark" data-bs-spy="scroll" data-bs-target="#navbar">
+<body>
 
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
-        <div class="container">
-            <a class="navbar-brand text-dark fw-bold tracking-tight" href="#">UJJWAL KUMAR</a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-secondary" href="https://github.com/ujjwalkumar14b" ><i class="bi bi-github fs-5 text-dark"></i></a></li>
-                    <li class="nav-item"><a class="nav-link text-secondary" href="https://linkedin.com/in/ujjwalkumar14b" ><i class="bi bi-linkedin fs-5 text-dark"></i></a></li>
-                    <li class="nav-item"><a class="nav-link text-secondary" href="tel:+918627041624" ><i class="bi bi-telephone fs-5 text-dark"></i></a></li>
-                    <li class="nav-item"><a class="nav-link text-secondary" href="mailto:ujjwalkumar14b@gmail.com"><i class="bi bi-envelope fs-5 text-dark"></i></a></li>
-                </ul>
+    <header class="sticky-top bg-white border-bottom py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="#" class="h4 mb-0 fw-bold text-dark text-decoration-none">Ujjwal Kumar</a>
+            <div class="d-flex gap-2">
+                <a href="https://github.com/ujjwalkumar14b" target="_blank" class="social-btn" title="GitHub"><i class="bi bi-github"></i></a>
+                <a href="https://linkedin.com/in/ujjwalkumar14b" target="_blank" class="social-btn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="tel:+918627041624" class="social-btn" title="Phone"><i class="bi bi-telephone"></i></a>
+                <a href="mailto:ujjwalkumar14b@gmail.com" class="social-btn" title="Email"><i class="bi bi-envelope"></i></a>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <section id="about" class="min-vh-100 d-flex align-items-center pt-5 bg-white">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <h1 class="display-3 fw-bold mb-4 text-dark">Building Full Stack Website and bridging gap between Software Engineering and AI.</h1>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="education" class="py-5 border-top">
-        <div class="container py-4">
-            <div class="text-uppercase text-secondary small fw-bold tracking-wider mb-4 pb-2 border-bottom">Education</div>
-            <div class="row">
-                <div class="col-lg-12">
-                    
-                    <div class="border-start border-2 border-dark ps-4 position-relative mb-5">
-                        <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
-                            <div>
-                                <h3 class="h4 fw-bold mb-0 text-dark">B.Tech in Computer Science & Engineering</h3>
-                                <span class="text-secondary">Meerut Institute of Engineering and Technology</span>
-                            </div>
-                            <span class="text-secondary font-monospace small">2023 – 2027</span>
-                        </div>
-                        <p class="text-secondary mt-2 mb-0"><strong class="text-dark">CGPA:</strong> 8.12</p>
-                    </div>
-
-                    <div class="border-start border-2 border-dark ps-4 position-relative mb-4">
-                        <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
-                            <div>
-                                <h3 class="h4 fw-bold mb-0 text-dark">Senior Secondary Education</h3>
-                                <span class="text-secondary">Army Public School, Meerut</span>
-                            </div>
-                            <span class="text-secondary font-monospace small">2021 – 2023</span>
-                        </div>
-                        <p class="text-secondary mt-2 mb-0">Mathematics and Computer Science</p>
-                    </div>
-
-                </div>
+    <section class="py-5 border-bottom bg-white">
+        <div class="container py-4 text-center">
+            <span class="badge rounded-pill text-bg-light border mb-3 px-3 py-2 fw-normal">Full Stack & AI Engineer</span>
+            <h1 class="display-5 fw-bold text-dark mb-3 col-lg-10 mx-auto" style="line-height: 1.3;">
+                Building Full Stack Applications & Bridging the Gap Between Software Engineering and AI
+            </h1>
+            <div class="mt-4 d-flex justify-content-center gap-3 text-muted">
+                <div><i class="bi bi-mortarboard text-dark me-1"></i> B.Tech in CSE</div>
+                <span>•</span>
+                <div><i class="bi bi-book text-dark me-1"></i> Senior Secondary Education</div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="py-5 border-top">
-        <div class="container py-4">
-            <div class="text-uppercase text-secondary small fw-bold tracking-wider mb-4 pb-2 border-bottom">Technical Skills</div>
+    <section class="py-5">
+        <div class="container">
+            <h2 class="fw-bold mb-4 fs-4 text-uppercase tracking-wider">Technical Skills</h2>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 rounded-0 border border-dark p-3 bg-white">
-                        <h4 class="h6 text-dark fw-bold mb-3 text-uppercase">Programming Languages</h4>
-                        <div class="d-flex flex-wrap gap-1">
-                            <span class="badge rounded-0 bg-transparent text-dark border border-dark font-monospace fw-normal p-2">Java</span>
-                            <span class="badge rounded-0 bg-transparent text-dark border border-dark font-monospace fw-normal p-2">Python</span>
-                            <span class="badge rounded-0 bg-transparent text-dark border border-dark font-monospace fw-normal p-2">SQL</span>
+                    <div class="card h-100 p-4 border-0 shadow-sm">
+                        <div class="h5 fw-bold mb-3"><i class="bi bi-code-slash me-2 text-primary"></i>Languages</div>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge badge-skill px-3 py-2">Java</span>
+                            <span class="badge badge-skill px-3 py-2">Python</span>
+                            <span class="badge badge-skill px-3 py-2">SQL</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 rounded-0 border border-dark p-3 bg-white">
-                        <h4 class="h6 text-dark fw-bold mb-3 text-uppercase">Web Development</h4>
-                        <div class="d-flex flex-wrap gap-1">
-                            <span class="badge rounded-0 bg-transparent text-dark border border-dark font-monospace fw-normal p-2">HTML5</span>
-                            <span class="badge rounded-0 bg-transparent text-dark border border-dark font-monospace fw-normal p-2">CSS3</span>
-                            <span class="badge rounded-0 bg-transparent text-dark border border-dark font-monospace fw-normal p-2">Javascript</span>
-                            <span class="badge rounded-0 bg-transparent text-dark border border-dark font-monospace fw-normal p-2">Bootstrap</span>
-                            <span class="badge rounded-0 bg-transparent text-dark border border-dark font-monospace fw-normal p-2">MongoDB</span>
-                            <span class="badge rounded-0 bg-transparent text-dark border border-dark font-monospace fw-normal p-2">Express.js</span>
-                            <span class="badge rounded-0 bg-transparent text-dark border border-dark font-monospace fw-normal p-2">React.js</span>
-                            <span class="badge rounded-0 bg-transparent text-dark border border-dark font-monospace fw-normal p-2">Node.js</span>
+                    <div class="card h-100 p-4 border-0 shadow-sm">
+                        <div class="h5 fw-bold mb-3"><i class="bi bi-globe me-2 text-primary"></i>Web Dev</div>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge badge-skill px-3 py-2">HTML5</span>
+                            <span class="badge badge-skill px-3 py-2">CSS3</span>
+                            <span class="badge badge-skill px-3 py-2">JavaScript</span>
+                            <span class="badge badge-skill px-3 py-2">React.js</span>
+                            <span class="badge badge-skill px-3 py-2">Node.js</span>
+                            <span class="badge badge-skill px-3 py-2">Express.js</span>
+                            <span class="badge badge-skill px-3 py-2">MongoDB</span>
+                            <span class="badge badge-skill px-3 py-2">Bootstrap</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 rounded-0 border border-dark p-3 bg-white">
-                        <h4 class="h6 text-dark fw-bold mb-3 text-uppercase">AI-ML</h4>
-                        <div class="d-flex flex-wrap gap-1">
-                            <span class="badge rounded-0 bg-transparent text-dark border border-dark font-monospace fw-normal p-2">NumPy</span>
-                            <span class="badge rounded-0 bg-transparent text-dark border border-dark font-monospace fw-normal p-2">Pandas</span>
-                            <span class="badge rounded-0 bg-transparent text-dark border border-dark font-monospace fw-normal p-2">Matplotlib</span>
-                            <span class="badge rounded-0 bg-transparent text-dark border border-dark font-monospace fw-normal p-2">Seaborn</span>
-                            <span class="badge rounded-0 bg-transparent text-dark border border-dark font-monospace fw-normal p-2">Scikit-Learn</span>
-                            <span class="badge rounded-0 bg-transparent text-dark border border-dark font-monospace fw-normal p-2">Machine Learning</span>
+                    <div class="card h-100 p-4 border-0 shadow-sm">
+                        <div class="h5 fw-bold mb-3"><i class="bi bi-cpu me-2 text-primary"></i>AI & ML</div>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge badge-skill px-3 py-2">Machine Learning</span>
+                            <span class="badge badge-skill px-3 py-2">NumPy</span>
+                            <span class="badge badge-skill px-3 py-2">Pandas</span>
+                            <span class="badge badge-skill px-3 py-2">Scikit-Learn</span>
+                            <span class="badge badge-skill px-3 py-2">Matplotlib</span>
+                            <span class="badge badge-skill px-3 py-2">Seaborn</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 rounded-0 border border-dark p-3 bg-white">
-                        <h4 class="h6 text-dark fw-bold mb-3 text-uppercase">Tools</h4>
-                        <div class="d-flex flex-wrap gap-1">
-                            <span class="badge rounded-0 bg-transparent text-dark border border-dark font-monospace fw-normal p-2">Git</span>
-                            <span class="badge rounded-0 bg-transparent text-dark border border-dark font-monospace fw-normal p-2">GitHub</span>
-                            <span class="badge rounded-0 bg-transparent text-dark border border-dark font-monospace fw-normal p-2">Visual Studio Code</span>
+                    <div class="card h-100 p-4 border-0 shadow-sm">
+                        <div class="h5 fw-bold mb-3"><i class="bi bi-tools me-2 text-primary"></i>Tools</div>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge badge-skill px-3 py-2">Git</span>
+                            <span class="badge badge-skill px-3 py-2">GitHub</span>
+                            <span class="badge badge-skill px-3 py-2">VS Code</span>
                         </div>
                     </div>
                 </div>
@@ -125,132 +130,85 @@
         </div>
     </section>
 
-    <section id="experience" class="py-5 border-top">
-        <div class="container py-4">
-            <div class="text-uppercase text-secondary small fw-bold tracking-wider mb-4 pb-2 border-bottom">Experience</div>
-            <div class="row">
-                <div class="col-lg-12">
-
-                    <div class="border-start border-2 border-dark ps-4 position-relative mb-5">
-                        <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
-                            <div><h3 class="h4 fw-bold mb-0 text-dark">AI-ML Intern, Codomax Digital Solutions</h3></div>
-                            <span class="text-secondary font-monospace small">Jul 2026 – Aug 2026</span>
-                        </div>
-                        <ul class="text-secondary ps-3 mt-3">
-                            <li>Engineered Time Series Forecasting pipeline for 80 quarterly power-consumption observations (2001–2020) using Python, Pandas, and Statsmodels, achieving 3.66M MAE, 3.90M RMSE, and 24.51% MAPE; generated 8-quarter out-of-sample forecasts to support energy-demand prediction and planning.</li>
-                            <li>Performed time-series EDA, rolling-window analysis, seasonal decomposition, and ADF stationarity testing (p=0.9986) and implemented Holt-Winters Exponential Smoothing with additive trend and quarterly seasonality.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="border-start border-2 border-dark ps-4 position-relative mb-5">
-                        <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
-                            <div><h3 class="h4 fw-bold mb-0 text-dark">AI-ML Intern, EduSkills Foundation</h3></div>
-                            <span class="text-secondary font-monospace small">Apr 2026 – Jun 2026</span>
-                        </div>
-                        <ul class="text-secondary ps-3 mt-3">
-                            <li>Built a Computer Vision pipeline to train a CNN-based Deep Learning model, achieving <strong class="text-dark">87% validation accuracy</strong> on a fashion image dataset.</li>
-                            <li>Integrated object detection pipelines with Google Cloud Vision API to detect multiple object categories seamlessly.</li>
-                        </ul>
-                    </div>
-
-                    <div class="border-start border-2 border-dark ps-4 position-relative mb-5">
-                        <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
-                            <div><h3 class="h4 fw-bold mb-0 text-dark">Data Science Intern, AISECT LEARN</h3></div>
-                            <span class="text-secondary font-monospace small">Nov 2025 – Jan 2026</span>
-                        </div>
-                        <ul class="text-secondary ps-3 mt-3">
-                            <li>Conducted end-to-end data science workflows including data preprocessing, EDA, feature engineering, model training, and hyperparameter tuning.</li>
-                            <li>Identified <strong class="text-dark">80% of churn customers</strong> using supervised models (Random Forest, Logistic Regression), pinpointing a High-Risk Spenders segment with a 59.1% churn rate.</li>
-                            <li>Segmented customers into 4 distinct groups using unsupervised learning (K-Means, PCA), highlighting the top 34.4% of customers generating <strong class="text-dark">73.7% of total revenue</strong>.</li>
-                        </ul>
-                    </div>
-
-                    <div class="border-start border-2 border-dark ps-4 position-relative mb-4">
-                        <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
-                            <div><h3 class="h4 fw-bold mb-0 text-dark">Python Full Stack Developer, EduSkills Foundation</h3></div>
-                            <span class="text-secondary font-monospace small">Oct 2024 – Dec 2024</span>
-                        </div>
-                        <ul class="text-secondary ps-3 mt-3">
-                            <li>Developed a responsive full-stack web application using HTML, CSS, JavaScript, Bootstrap, Flask, and MySQL with seamless front-end and back-end integration.</li>
-                            <li>Implemented full CRUD functionality with Flask and MySQL for dynamic database interactions.</li>
-                            <li>Built secure authentication and authorization features, including user registration, login, role-based access control, and session management.</li>
-                            <li>Utilized Git and GitHub for version control and collaborative development alongside VS Code.</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="py-5 border-top">
-        <div class="container py-4">
-            <div class="text-uppercase text-secondary small fw-bold tracking-wider mb-4 pb-2 border-bottom">Projects</div>
+    <section class="py-5 bg-white border-top">
+        <div class="container">
+            <h2 class="fw-bold mb-4 fs-4 text-uppercase tracking-wider">Experience</h2>
             <div class="row g-4">
-                
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 rounded-0 border border-dark p-3 bg-white">
-                        <div class="card-body d-flex flex-column justify-content-between p-0">
-                            <div>
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <i class="bi bi-diagram-3 fs-3 text-dark"></i>
-                                    <a href="https://github.com/ujjwalkumar14b/Product_Recommendation_System" class="text-dark text-decoration-none" title="View Code"><i class="bi bi-code-slash fs-4"></i></a>
-                                </div>
-                                <h3 class="h5 fw-bold mb-2 text-dark">Product Recommendation System</h3>
-                                <p class="text-secondary small mb-4">B.Tech final year capstone project engineered using collaborative and content-based filtering techniques to personalize user product recommendations.</p>
-                            </div>
+                <div class="col-12">
+                    <div class="card p-4 border-0 shadow-sm">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h3 class="h5 fw-bold mb-0">AI-ML Intern</h3>
+                            <span class="text-muted small">Codomax Digital Solutions</span>
                         </div>
+                        <ul class="text-secondary mb-0 ps-3">
+                            <li class="mb-2">Built full-stack PDF-based RAG Chatbot using Flask, LangChain, FAISS, and Ollama, enabling contextual Q&A.</li>
+                            <li>Eliminated model hallucinations by creating a searchable vector database using Hugging Face embeddings and strict context-bound prompting.</li>
+                        </ul>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 rounded-0 border border-dark p-3 bg-white">
-                        <div class="card-body d-flex flex-column justify-content-between p-0">
-                            <div>
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <i class="bi bi-file-earmark-text fs-3 text-dark"></i>
-                                    <a href="https://github.com/ujjwalkumar14b/Data_Science_Project" class="text-dark text-decoration-none" title="View Code"><i class="bi bi-code-slash fs-4"></i></a>
-                                </div>
-                                <h3 class="h5 fw-bold mb-2 text-dark">Financial Report Chatbot (PDF RAG)</h3>
-                                <p class="text-secondary small mb-4">Retrieval-Augmented Generation chatbot built with LangChain, FAISS, Hugging Face embeddings, and LLMs to answer queries from unstructured PDF documents.</p>
-                            </div>
+                <div class="col-12">
+                    <div class="card p-4 border-0 shadow-sm">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h3 class="h5 fw-bold mb-0">Data Science Intern</h3>
+                            <span class="text-muted small">AISECT LEARN</span>
                         </div>
+                        <ul class="text-secondary mb-0 ps-3">
+                            <li class="mb-2">Worked on customer segmentation and churn prediction project using supervised and unsupervised learning.</li>
+                            <li class="mb-2">Segmented customers into 4 behavioral groups using K-Means Clustering identifying highest-value customer segment.</li>
+                            <li>Identified 59.1% churn rate of High-Risk Spenders segment using Random Forest and Logistic Regression.</li>
+                        </ul>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 rounded-0 border border-dark p-3 bg-white">
-                        <div class="card-body d-flex flex-column justify-content-between p-0">
-                            <div>
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <i class="bi bi-shield-check fs-3 text-dark"></i>
-                                    <a href="https://github.com/ujjwalkumar14b/Data_Science_Project" class="text-dark text-decoration-none" title="View Code"><i class="bi bi-code-slash fs-4"></i></a>
-                                </div>
-                                <h3 class="h5 fw-bold mb-2 text-dark">Credit Card Fraud Detection</h3>
-                                <p class="text-secondary small mb-4">Supervised ML models trained on highly imbalanced financial transaction data to identify fraudulent activity and classify applicant default probability.</p>
-                            </div>
+                <div class="col-12">
+                    <div class="card p-4 border-0 shadow-sm">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h3 class="h5 fw-bold mb-0">Python Full Stack Developer</h3>
+                            <span class="text-muted small">EduSkills Foundation</span>
                         </div>
+                        <ul class="text-secondary mb-0 ps-3">
+                            <li class="mb-2">Created a responsive full-stack web application using HTML5, CSS3, Bootstrap, Flask, and SQL.</li>
+                            <li>Implemented structured database queries and leveraged Git & GitHub for version control and collaborative development.</li>
+                        </ul>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 rounded-0 border border-dark p-3 bg-white">
-                        <div class="card-body d-flex flex-column justify-content-between p-0">
-                            <div>
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <i class="bi bi-chat-quote fs-3 text-dark"></i>
-                                    <a href="https://github.com/ujjwalkumar14b/Data_Science_Project" class="text-dark text-decoration-none" title="View Code"><i class="bi bi-code-slash fs-4"></i></a>
-                                </div>
-                                <h3 class="h5 fw-bold mb-2 text-dark">Trader Sentiment Analysis</h3>
-                                <p class="text-secondary small mb-4">NLP model analyzing trader discussions and activity to classify sentiment into bullish, bearish, and neutral categories to uncover market patterns.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="fw-bold mb-4 fs-4 text-uppercase tracking-wider">Key Projects</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card h-100 p-4 border-0 shadow-sm">
+                        <h3 class="h5 fw-bold mb-3">Product Recommendation System</h3>
+                        <ul class="text-secondary mb-0 ps-3">
+                            <li class="mb-2">Developed a personalized product recommendation web app using Flask, HTML, CSS, and Bootstrap.</li>
+                            <li class="mb-2">Implemented Popularity-Based, User-Based & Item-Based Collaborative Filtering, TF-IDF Content-Based, and Hybrid approaches.</li>
+                            <li>Built recommendation pipelines for 300K+ customer records with 97.68% data sparsity, achieving a 98.07% top-5 personalization evaluation metric.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card h-100 p-4 border-0 shadow-sm">
+                        <h3 class="h5 fw-bold mb-3">Social Media Website</h3>
+                        <ul class="text-secondary mb-0 ps-3">
+                            <li class="mb-2">Built a full-stack MERN social media application supporting core CRUD workflows and RESTful architecture.</li>
+                            <li class="mb-2">Developed reusable React components and client-side state management for optimal performance.</li>
+                            <li class="mb-2">Implemented JWT-based authentication architecture with protected routes.</li>
+                            <li>Established automated build verification and deployed on Vercel with GitHub CI/CD integration.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 bg-white border-top text-center text-muted small">
+        <div class="container">
+            &copy; 2026 Ujjwal Kumar.
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
