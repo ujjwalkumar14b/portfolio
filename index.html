@@ -17,7 +17,6 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Ujjwal Kumar - Portfolio" />
 
-    
     <title>Ujjwal Kumar | Portfolio</title>
     <link rel="canonical" href="https://github.com/ujjwalkumar14b" />
     <link rel="icon" href="https://avatars.githubusercontent.com/u/164533721?v=4">
@@ -48,7 +47,8 @@
         .badge-skill {
             font-weight: 500;
             background-color: var(--bs-secondary-bg);
-            color: var(--bs-body-color);
+            /* Improved contrast for secondary text/badges */
+            color: var(--bs-emphasis-color);
             border: 1px solid var(--bs-border-color);
         }
     </style>
@@ -57,190 +57,193 @@
 
     <header class="sticky-top bg-body py-3">
         <div class="container border-bottom d-flex justify-content-between align-items-center">
-            <h2 class="h4 mb-0 fw-bold text-body">Ujjwal Kumar</h2>
-            <div class="d-flex align-items-center gap-2">
-                <a href="https://github.com/ujjwalkumar14b" target="_blank" class="social-btn" title="GitHub"><i class="bi bi-github"></i></a>
-                <a href="https://linkedin.com/in/ujjwalkumar14b" target="_blank" class="social-btn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                <a href="tel:+918627041624" class="social-btn" title="Phone"><i class="bi bi-telephone"></i></a>
-                <a href="mailto:ujjwalkumar14b@gmail.com" class="social-btn" title="Email"><i class="bi bi-envelope"></i></a>
-            </div>
+            <span class="h4 mb-0 fw-bold text-body">Ujjwal Kumar</span>
+            <nav aria-label="Social Media Links">
+                <div class="d-flex align-items-center gap-2">
+                    <a href="https://github.com/ujjwalkumar14b" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub Profile"><i class="bi bi-github" aria-hidden="true"></i></a>
+                    <a href="https://linkedin.com/in/ujjwalkumar14b" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+                    <a href="tel:+918627041624" class="social-btn" aria-label="Phone Call"><i class="bi bi-telephone" aria-hidden="true"></i></a>
+                    <a href="mailto:ujjwalkumar14b@gmail.com" class="social-btn" aria-label="Send Email"><i class="bi bi-envelope" aria-hidden="true"></i></a>
+                </div>
+            </nav>
         </div>
     </header>
 
-    <section class="py-5 bg-body">
-        <div class="container py-4">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-lg-8">
-                    <h1 class="display-5 fw-bold text-body mb-3" style="line-height: 1.3;">
-                        Building Full Stack Applications & Bridging the Gap Between Software Engineering and AI
-                    </h1>
-                    <p class="lead text-body-secondary mb-4">
-                        Passionate Computer Science student focused on scalable web development, machine learning models, and data-driven solutions.
-                    </p>
-                    <div class="d-flex gap-3">
-                        <a class="btn btn-lg rounded-pill px-4 btn-dark" href="mailto:ujjwalkumar14b@gmail.com">Contact Me</a>
-                        <a class="btn btn-lg rounded-pill px-4 btn-outline-secondary" href="https://github.com/ujjwalkumar14b">GitHub Profile</a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 text-center mt-4 mt-lg-0">
-                    <img src="https://avatars.githubusercontent.com/u/164533721?v=4" 
-                         alt="Profile Picture" 
-                         class="rounded-circle border border-3 border-secondary shadow-sm" 
-                         style="width: 300px; height: 300px; object-fit: cover;">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-5 bg-body">
-        <div class="container">
-            <h2 class="fw-bold mb-4 fs-4 tracking-wider">Skills</h2>
-            <div class="row g-4">
-                <div class="col-12">
-                    <div class="card h-100 p-4 border-0 shadow-sm bg-body-tertiary d-flex flex-column gap-4">                        
-                        <div class="d-flex flex-wrap align-items-center gap-3">
-                            <span class="badge badge-skill px-3 py-2">Java</span>
-                            <span class="badge badge-skill px-3 py-2">HTML5</span>
-                            <span class="badge badge-skill px-3 py-2">CSS3</span>
-                            <span class="badge badge-skill px-3 py-2">JavaScript</span>
-                            <span class="badge badge-skill px-3 py-2">Bootstrap</span>
-                            <span class="badge badge-skill px-3 py-2">MongoDB</span>
-                            <span class="badge badge-skill px-3 py-2">Express.js</span>
-                            <span class="badge badge-skill px-3 py-2">React.js</span>
-                            <span class="badge badge-skill px-3 py-2">Node.js</span>
-                            <span class="badge badge-skill px-3 py-2">Python</span>
-                            <span class="badge badge-skill px-3 py-2">NumPy</span>
-                            <span class="badge badge-skill px-3 py-2">Pandas</span>                            
-                            <span class="badge badge-skill px-3 py-2">Matplotlib</span>
-                            <span class="badge badge-skill px-3 py-2">Seaborn</span>
-                            <span class="badge badge-skill px-3 py-2">Scikit-Learn</span>
-                            <span class="badge badge-skill px-3 py-2">SQL</span>
-                            <span class="badge badge-skill px-3 py-2">Machine Learning</span>
-                            <span class="badge badge-skill px-3 py-2">Git</span>
-                            <span class="badge badge-skill px-3 py-2">GitHub</span>
-                            <span class="badge badge-skill px-3 py-2">VS Code</span>
-                        </div>    
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-5 bg-body">
-        <div class="container">
-            <h2 class="fw-bold mb-4 fs-4 tracking-wider">Education</h2>
-            <div class="row g-4">
-                <div class="col-12">
-                    <div class="card p-4 border-0 shadow-sm bg-body-tertiary">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h3 class="h5 fw-bold mb-0">B.Tech CSE</h3>
-                            <span class="text-muted small">Aug 2023 - Jun 2027 | MIET, Meerut</span>
+    <main>
+        <section class="py-5 bg-body">
+            <div class="container py-4">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-8">
+                        <h1 class="display-5 fw-bold text-body mb-3" style="line-height: 1.3;">
+                            Building Full Stack Applications & Bridging the Gap Between Software Engineering and AI
+                        </h1>
+                        <p class="lead text-body-secondary mb-4">
+                            Passionate Computer Science student focused on scalable web development, machine learning models, and data-driven solutions.
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a class="btn btn-lg rounded-pill px-4 btn-dark" href="mailto:ujjwalkumar14b@gmail.com">Contact Me</a>
+                            <a class="btn btn-lg rounded-pill px-4 btn-outline-secondary" href="https://github.com/ujjwalkumar14b" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <h3 class="h5 fw-bold mb-0">Intermediate</h3>
-                            <span class="text-muted small">Mar 2021 - Jun 2023 | APS, Meerut</span>
+                    </div>
+                    
+                    <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                        <img src="https://avatars.githubusercontent.com/u/164533721?v=4" 
+                             alt="Profile Picture of Ujjwal Kumar" 
+                             class="rounded-circle border border-3 border-secondary shadow-sm" 
+                             style="width: 300px; height: 300px; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-body">
+            <div class="container">
+                <h2 class="fw-bold mb-4 fs-4">Skills</h2>
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="card h-100 p-4 border-0 shadow-sm bg-body-tertiary d-flex flex-column gap-4">                        
+                            <div class="d-flex flex-wrap align-items-center gap-3">
+                                <span class="badge badge-skill px-3 py-2">Java</span>
+                                <span class="badge badge-skill px-3 py-2">HTML5</span>
+                                <span class="badge badge-skill px-3 py-2">CSS3</span>
+                                <span class="badge badge-skill px-3 py-2">JavaScript</span>
+                                <span class="badge badge-skill px-3 py-2">Bootstrap</span>
+                                <span class="badge badge-skill px-3 py-2">MongoDB</span>
+                                <span class="badge badge-skill px-3 py-2">Express.js</span>
+                                <span class="badge badge-skill px-3 py-2">React.js</span>
+                                <span class="badge badge-skill px-3 py-2">Node.js</span>
+                                <span class="badge badge-skill px-3 py-2">Python</span>
+                                <span class="badge badge-skill px-3 py-2">NumPy</span>
+                                <span class="badge badge-skill px-3 py-2">Pandas</span>                            
+                                <span class="badge badge-skill px-3 py-2">Matplotlib</span>
+                                <span class="badge badge-skill px-3 py-2">Seaborn</span>
+                                <span class="badge badge-skill px-3 py-2">Scikit-Learn</span>
+                                <span class="badge badge-skill px-3 py-2">SQL</span>
+                                <span class="badge badge-skill px-3 py-2">Machine Learning</span>
+                                <span class="badge badge-skill px-3 py-2">Git</span>
+                                <span class="badge badge-skill px-3 py-2">GitHub</span>
+                                <span class="badge badge-skill px-3 py-2">VS Code</span>
+                            </div>    
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="py-5 bg-body">
-        <div class="container">
-            <h2 class="fw-bold mb-4 fs-4 tracking-wider">Experience</h2>
-            <div class="row g-4">
-                <div class="col-12">
-                    <div class="card p-4 border-0 shadow-sm bg-body-tertiary">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h3 class="h5 fw-bold mb-0">AI-ML Intern, Codomax Digital Solutions </h3>
-                            <span class="text-muted small">Jul 2026 - Aug 2026 | Remote</span>
+        <section class="py-5 bg-body">
+            <div class="container">
+                <h2 class="fw-bold mb-4 fs-4">Education</h2>
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="card p-4 border-0 shadow-sm bg-body-tertiary">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h3 class="h5 fw-bold mb-0">B.Tech CSE</h3>
+                                <span class="text-body-secondary small">Aug 2023 - Jun 2027 | MIET, Meerut</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h3 class="h5 fw-bold mb-0">Intermediate</h3>
+                                <span class="text-body-secondary small">Mar 2021 - Jun 2023 | APS, Meerut</span>
+                            </div>
                         </div>
-                        <ul class="text-secondary mb-0 ps-3">
-                            <li class="mb-2">Engineered Time Series Forecasting pipeline for 80 quarterly power-consumption observations (2001–2020) using Python, Pandas, and Statsmodels, generating 8-quarter out-of-sample forecasts to support energy-demand prediction.</li>
-                            <li>Performed time-series EDA, rolling-window analysis, seasonal decomposition, and ADF stationarity testing (p=0.9986) and implemented Holt-Winters Exponential Smoothing with additive trend and quarterly seasonality.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="card p-4 border-0 shadow-sm bg-body-tertiary">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h3 class="h5 fw-bold mb-0">Data Science Intern, AISECT LEARN</h3>
-                            <span class="text-muted small">Nov 2025 - Jan 2026 | Remote</span>
-                        </div>
-                        <ul class="text-secondary mb-0 ps-3">
-                            <li class="mb-2">Worked on customer segmentation and churn prediction project using supervised and unsupervised learning, applying data cleaning, EDA, feature engineering, hyperparameter tuning, model training and evaluation.</li>
-                            <li class="mb-2">Segmented customers into 4 behavioral groups using K-Means Clustering identifying highest-value customer segment.</li>
-                            <li>Identified 59.1% churn rate of High-Risk Spenders segment using Random Forest and Logistic Regression.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="card p-4 border-0 shadow-sm bg-body-tertiary">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h3 class="h5 fw-bold mb-0">Python Full Stack Developer, EduSkills Foundation</h3>
-                            <span class="text-muted small">Oct 2024 - Dec 2024 | Remote</span>
-                        </div>
-                        <ul class="text-secondary mb-0 ps-3">
-                            <li class="mb-2">Created a responsive full-stack web application using HTML5, CSS3, Bootstrap, Flask, and SQL.</li>
-                            <li>Implemented structured database queries and leveraged Git & GitHub for version control and collaborative development.</li>
-                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="py-5 bg-body">
-        <div class="container">
-            <h2 class="fw-bold mb-4 fs-4 tracking-wider">Projects</h2>
-            <div class="row g-4">
-                <div class="col-12">
-                    <div class="card p-4 border-0 shadow-sm bg-body-tertiary">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h3 class="h5 fw-bold mb-3">Social Media Website</h3>
-                            <span class="text-muted small"><a class="text-muted text-decoration-none" href="https://github.com/ujjwalkumar14b/Social_Media">GitHub</a> | <a class="text-muted text-decoration-none" href="https://social-media-snowy-three.vercel.app/">Link</a></span>
+        <section class="py-5 bg-body">
+            <div class="container">
+                <h2 class="fw-bold mb-4 fs-4">Experience</h2>
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="card p-4 border-0 shadow-sm bg-body-tertiary">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h3 class="h5 fw-bold mb-0">AI-ML Intern, Codomax Digital Solutions </h3>
+                                <span class="text-body-secondary small">Jul 2026 - Aug 2026 | Remote</span>
+                            </div>
+                            <ul class="text-body-secondary mb-0 ps-3">
+                                <li class="mb-2">Engineered Time Series Forecasting pipeline for 80 quarterly power-consumption observations (2001–2020) using Python, Pandas, and Statsmodels, generating 8-quarter out-of-sample forecasts to support energy-demand prediction.</li>
+                                <li>Performed time-series EDA, rolling-window analysis, seasonal decomposition, and ADF stationarity testing (p=0.9986) and implemented Holt-Winters Exponential Smoothing with additive trend and quarterly seasonality.</li>
+                            </ul>
                         </div>
-                        <ul class="text-secondary mb-0 ps-3">
-                            <li class="mb-2">Built a full-stack MERN social media application supporting core CRUD workflows and RESTful architecture.</li>
-                            <li class="mb-2">Developed reusable React components and client-side state management for optimal performance.</li>
-                            <li class="mb-2">Implemented JWT-based authentication architecture with protected routes.</li>
-                            <li>Established automated build verification and deployed on Vercel with GitHub CI/CD integration.</li>
-                        </ul>
                     </div>
-                </div>
-                <div class="col-12">
-                    <div class="card p-4 border-0 shadow-sm bg-body-tertiary">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h3 class="h5 fw-bold mb-3">Product Recommendation System</h3>
-                            <span class="text-muted small"><a class="text-muted text-decoration-none" href="https://github.com/ujjwalkumar14b/PickPerfect">GitHub</a> | <a class="text-muted text-decoration-none" href="https://pickperfect-5a5k.onrender.com/">Link</a></span> 
+                    <div class="col-12">
+                        <div class="card p-4 border-0 shadow-sm bg-body-tertiary">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h3 class="h5 fw-bold mb-0">Data Science Intern, AISECT LEARN</h3>
+                                <span class="text-body-secondary small">Nov 2025 - Jan 2026 | Remote</span>
+                            </div>
+                            <ul class="text-body-secondary mb-0 ps-3">
+                                <li class="mb-2">Worked on customer segmentation and churn prediction project using supervised and unsupervised learning, applying data cleaning, EDA, feature engineering, hyperparameter tuning, model training and evaluation.</li>
+                                <li class="mb-2">Segmented customers into 4 behavioral groups using K-Means Clustering identifying highest-value customer segment.</li>
+                                <li>Identified 59.1% churn rate of High-Risk Spenders segment using Random Forest and Logistic Regression.</li>
+                            </ul>
                         </div>
-                        <ul class="text-secondary mb-0 ps-3">
-                            <li class="mb-2">Developed a personalized product recommendation web app using Flask, HTML, CSS, and Bootstrap.</li>
-                            <li class="mb-2">Implemented Popularity-Based, User-Based & Item-Based Collaborative Filtering, TF-IDF Content-Based, and Hybrid approaches.</li>
-                            <li>Built recommendation pipelines for 300K+ customer records with 97.68% data sparsity, achieving a 98.07% top-5 personalization evaluation metric.</li>
-                        </ul>
                     </div>
-                </div>
-                <div class="col-12">
-                    <div class="card p-4 border-0 shadow-sm bg-body-tertiary">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h3 class="h5 fw-bold mb-3">Credit Card Fraud Detection</h3>
-                            <span class="text-muted small"><a class="text-muted text-decoration-none" href="https://github.com/ujjwalkumar14b/Credit_Card_Fraud_Detection">GitHub</a> | <a class="text-muted text-decoration-none" href="https://credit-card-fraud-detection-v4m8.onrender.com/">Link</a></span> 
+                    <div class="col-12">
+                        <div class="card p-4 border-0 shadow-sm bg-body-tertiary">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h3 class="h5 fw-bold mb-0">Python Full Stack Developer, EduSkills Foundation</h3>
+                                <span class="text-body-secondary small">Oct 2024 - Dec 2024 | Remote</span>
+                            </div>
+                            <ul class="text-body-secondary mb-0 ps-3">
+                                <li class="mb-2">Created a responsive full-stack web application using HTML5, CSS3, Bootstrap, Flask, and SQL.</li>
+                                <li>Implemented structured database queries and leveraged Git & GitHub for version control and collaborative development.</li>
+                            </ul>
                         </div>
-                        <ul class="text-secondary mb-0 ps-3">
-                            <li class="mb-2">Developed an XGBoost Credit Card Fraud Detection pipeline on 778K+ financial transactions</li>
-                            <li class="mb-2">Applied temporal, demographic, categorical, and geospatial feature engineering, including transaction time, customer age, and Haversine-based merchant distance.</li>
-                            <li class="mb-2">Addressed severe class imbalance using weighted XGBoost training, achieving 95% fraud recall, 0.9151 PR-AUC, and 44% fraud precision.</li>
-                            <li>Prioritized detection of fraudulent transactions while minimizing missed fraud cases.</li>
-                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <section class="py-5 bg-body">
+            <div class="container">
+                <h2 class="fw-bold mb-4 fs-4">Projects</h2>
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="card p-4 border-0 shadow-sm bg-body-tertiary">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h3 class="h5 fw-bold mb-3">Social Media Website</h3>
+                                <span class="text-muted small"><a class="text-muted text-decoration-none" href="https://github.com/ujjwalkumar14b/Social_Media">GitHub</a> | <a class="text-muted text-decoration-none" href="https://social-media-snowy-three.vercel.app/">Link</a></span>
+                            </div>
+                            <ul class="text-secondary mb-0 ps-3">
+                                <li class="mb-2">Built a full-stack MERN social media application supporting core CRUD workflows and RESTful architecture.</li>
+                                <li class="mb-2">Developed reusable React components and client-side state management for optimal performance.</li>
+                                <li class="mb-2">Implemented JWT-based authentication architecture with protected routes.</li>
+                                <li>Established automated build verification and deployed on Vercel with GitHub CI/CD integration.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card p-4 border-0 shadow-sm bg-body-tertiary">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h3 class="h5 fw-bold mb-3">Product Recommendation System</h3>
+                                <span class="text-muted small"><a class="text-muted text-decoration-none" href="https://github.com/ujjwalkumar14b/PickPerfect">GitHub</a> | <a class="text-muted text-decoration-none" href="https://pickperfect-5a5k.onrender.com/">Link</a></span> 
+                            </div>
+                            <ul class="text-secondary mb-0 ps-3">
+                                <li class="mb-2">Developed a personalized product recommendation web app using Flask, HTML, CSS, and Bootstrap.</li>
+                                <li class="mb-2">Implemented Popularity-Based, User-Based & Item-Based Collaborative Filtering, TF-IDF Content-Based, and Hybrid approaches.</li>
+                                <li>Built recommendation pipelines for 300K+ customer records with 97.68% data sparsity, achieving a 98.07% top-5 personalization evaluation metric.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card p-4 border-0 shadow-sm bg-body-tertiary">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h3 class="h5 fw-bold mb-3">Credit Card Fraud Detection</h3>
+                                <span class="text-muted small"><a class="text-muted text-decoration-none" href="https://github.com/ujjwalkumar14b/Credit_Card_Fraud_Detection">GitHub</a> | <a class="text-muted text-decoration-none" href="https://credit-card-fraud-detection-v4m8.onrender.com/">Link</a></span> 
+                            </div>
+                            <ul class="text-secondary mb-0 ps-3">
+                                <li class="mb-2">Developed an XGBoost Credit Card Fraud Detection pipeline on 778K+ financial transactions</li>
+                                <li class="mb-2">Applied temporal, demographic, categorical, and geospatial feature engineering, including transaction time, customer age, and Haversine-based merchant distance.</li>
+                                <li class="mb-2">Addressed severe class imbalance using weighted XGBoost training, achieving 95% fraud recall, 0.9151 PR-AUC, and 44% fraud precision.</li>
+                                <li>Prioritized detection of fraudulent transactions while minimizing missed fraud cases.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
