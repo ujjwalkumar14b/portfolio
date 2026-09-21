@@ -17,506 +17,1017 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Ujjwal Kumar - Portfolio" />
 
-    <title>Ujjwal Kumar | Portfolio</title>
-    <link rel="canonical" href="https://github.com/ujjwalkumar14b" />
-    <link rel="icon" href="https://avatars.githubusercontent.com/u/164533721?v=4">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <title>Ujjwal Kumar | Full Stack Developer & AI-ML Specialist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap">
 
-  <style>
-    :root {
-      --bg-color: #fcf8f6;
-      --card-bg: #f5ebe6;
-      --text-dark: #2b2321;
-      --text-muted: #7c6f6c;
-      --accent-coral: #ff7052;
-      --accent-orange: #ff5436;
-      --pill-bg: #ebdcd5;
-    }
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+            --accent-cyan: #06b6d4;
+            --accent-violet: #8b5cf6;
+            --accent-emerald: #10b981;
+            
+            /* Light Mode Variables (Default) */
+            --bg-base: #f8fafc;
+            --bg-surface: rgba(255, 255, 255, 0.85);
+            --bg-card: rgba(255, 255, 255, 0.65);
+            --bg-card-hover: rgba(241, 245, 249, 0.9);
+            --border-glass: rgba(0, 0, 0, 0.08);
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --shadow-glow: rgba(99, 102, 241, 0.1);
+            --nav-bg: rgba(248, 250, 252, 0.85); 
+        }
 
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-dark);
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      overflow-x: hidden;
-    }
+        [data-bs-theme="dark"] {
+            --bg-base: #0f172a;
+            --bg-surface: rgba(30, 41, 59, 0.7);
+            --bg-card: rgba(30, 41, 59, 0.5);
+            --bg-card-hover: rgba(51, 65, 85, 0.7);
+            --border-glass: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --shadow-glow: rgba(99, 102, 241, 0.15);
+            --nav-bg: rgba(15, 23, 42, 0.85);
+        }
 
-    /* Soft top-right ambient background glow */
-    .bg-gradient-glow {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(255,182,160,0.45) 0%, rgba(252,248,246,0) 70%);
-      z-index: -1;
-      pointer-events: none;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            overflow-x: hidden;
+            transition: background-color 0.4s ease, color 0.4s ease;
+            position: relative;
+        }
 
-    /* Navbar styling */
-    .navbar {
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
-    }
-    .navbar-brand {
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: var(--text-dark);
-    }
-    .navbar-brand span {
-      color: var(--accent-coral);
-    }
-    .nav-link {
-      color: var(--text-dark);
-      font-weight: 500;
-      margin: 0 0.5rem;
-      font-size: 0.95rem;
-    }
-    .nav-link:hover {
-      color: var(--accent-coral);
-    }
-    .btn-talk {
-      background-color: #ffffff;
-      color: var(--text-dark);
-      border-radius: 50px;
-      padding: 0.5rem 1.25rem;
-      font-weight: 600;
-      border: 1px solid #e3d5cf;
-      font-size: 0.9rem;
-      transition: all 0.2s ease;
-    }
-    .btn-talk:hover {
-      background-color: var(--text-dark);
-      color: #ffffff;
-    }
+        code, pre, .font-mono {
+            font-family: 'Fira Code', monospace;
+        }
 
-    /* Hero Section */
-    .hero-heading {
-      font-size: 3.5rem;
-      font-weight: 700;
-      line-height: 1.15;
-    }
-    .hero-heading span {
-      color: var(--accent-orange);
-    }
-    .hero-subtext {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      line-height: 1.6;
-    }
+        /* Background Particle Canvas */
+        #particle-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.6;
+        }
 
-    /* Buttons */
-    .btn-orange {
-      background-color: var(--accent-orange);
-      color: white;
-      border-radius: 50px;
-      padding: 0.75rem 1.75rem;
-      font-weight: 600;
-      border: none;
-      transition: opacity 0.2s;
-    }
-    .btn-orange:hover {
-      color: white;
-      opacity: 0.9;
-    }
-    .btn-outline-custom {
-      background-color: transparent;
-      color: var(--text-dark);
-      border: 1px solid #e3d5cf;
-      border-radius: 50px;
-      padding: 0.75rem 1.75rem;
-      font-weight: 600;
-    }
-    .btn-outline-custom:hover {
-      background-color: var(--pill-bg);
-      color: var(--text-dark);
-    }
+        /* Glassmorphism Classes */
+        .glass-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-    /* Hero Visual & Status Box */
-    .hero-img-wrapper {
-      position: relative;
-      display: inline-block;
-      width: 100%;
-      max-width: 420px;
-    }
-    .hero-img {
-      width: 100%;
-      border-radius: 50% 50% 20px 20px;
-      object-fit: cover;
-    }
-    .status-card {
-      position: absolute;
-      bottom: -20px;
-      right: -10px;
-      background: rgba(255, 255, 255, 0.75);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      border-radius: 20px;
-      padding: 1.25rem;
-      max-width: 250px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-    }
-    .status-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: #e54b2a;
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      background-color: #e54b2a;
-      border-radius: 50%;
-    }
+        .glass-card:hover {
+            background: var(--bg-card-hover);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 30px -10px var(--shadow-glow);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
 
-    /* Section Typography */
-    .section-tag {
-      color: var(--accent-orange);
-      font-weight: 600;
-      font-size: 0.8rem;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 0.5rem;
-    }
-    .section-title {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 2rem;
-    }
+        .glass-nav {
+            background: var(--nav-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-glass);
+            transition: all 0.3s ease;
+        }
 
-    /* Cards */
-    .custom-card {
-      background-color: var(--card-bg);
-      border-radius: 24px;
-      border: none;
-      padding: 2rem;
-      transition: transform 0.2s ease;
-    }
-    .custom-card:hover {
-      transform: translateY(-4px);
-    }
+        /* Custom Typography & Gradient Text */
+        .text-gradient {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-    /* Skill Pills */
-    .skill-pill {
-      background-color: #ffffff;
-      color: var(--text-dark);
-      padding: 0.5rem 1rem;
-      border-radius: 50px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      display: inline-block;
-      margin: 0.25rem;
-      border: 1px solid #ebdcd5;
-    }
+        .text-cyan { color: var(--accent-cyan); }
+        .text-emerald { color: var(--accent-emerald); }
 
-    /* Icon Links */
-    .social-icon-btn {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background-color: #ffffff;
-      border: 1px solid #e3d5cf;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-dark);
-      text-decoration: none;
-      margin-right: 0.5rem;
-      transition: all 0.2s ease;
-    }
-    .social-icon-btn:hover {
-      background-color: var(--text-dark);
-      color: #ffffff;
-    }
+        /* Custom Buttons */
+        .btn-gradient {
+            background: var(--primary-gradient);
+            color: #ffffff !important;
+            border: none;
+            border-radius: 12px;
+            padding: 12px 28px;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
 
-    /* Timeline Styling */
-    .timeline-item {
-      border-left: 2px solid #e3d5cf;
-      padding-left: 1.5rem;
-      position: relative;
-      padding-bottom: 2rem;
-    }
-    .timeline-item:last-child {
-      border-left: 2px solid transparent;
-      padding-bottom: 0;
-    }
-    .timeline-dot {
-      position: absolute;
-      left: -6px;
-      top: 4px;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: var(--accent-orange);
-    }
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
+            color: #fff;
+        }
 
-    /* Footer */
-    footer {
-      border-top: 1px solid #ebdcd5;
-      padding-top: 3rem;
-      padding-bottom: 3rem;
-    }
-  </style>
+        .btn-glass {
+            background: var(--bg-card);
+            color: var(--text-main);
+            border: 1px solid var(--border-glass);
+            border-radius: 12px;
+            padding: 12px 28px;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .btn-glass:hover {
+            background: var(--bg-card-hover);
+            color: var(--text-main);
+            border-color: rgba(99, 102, 241, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Pulsing Glow */
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+
+        .hero-glow {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.35) 0%, rgba(217, 70, 239, 0.1) 70%, transparent 100%);
+            filter: blur(60px);
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulseGlow 8s infinite ease-in-out;
+        }
+
+        /* Typing Effect Caret */
+        .typing-cursor {
+            display: inline-block;
+            width: 3px;
+            background-color: var(--accent-cyan);
+            animation: blink 1s infinite;
+            margin-left: 4px;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* Section Headings */
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Timeline Styling */
+        .timeline-container {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background: linear-gradient(180deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 6px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--bg-base);
+            border: 3px solid #8b5cf6;
+            box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover::before {
+            background: #8b5cf6;
+            transform: scale(1.2);
+        }
+
+        /* Custom Tabs for Skills */
+        .custom-nav-pills .nav-link {
+            color: var(--text-muted);
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 12px;
+            padding: 10px 20px;
+            margin: 0 6px 12px 0;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .custom-nav-pills .nav-link.active,
+        .custom-nav-pills .nav-link:hover {
+            color: #ffffff;
+            background: var(--primary-gradient);
+            border-color: transparent;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        /* Tech Tag Badges */
+        .tech-badge {
+            background: rgba(99, 102, 241, 0.12);
+            color: #818cf8;
+            border: 1px solid rgba(99, 102, 241, 0.25);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        [data-bs-theme="light"] .tech-badge {
+            background: rgba(99, 102, 241, 0.08);
+            color: #4f46e5;
+        }
+
+        .tech-badge:hover {
+            transform: translateY(-2px);
+            background: rgba(99, 102, 241, 0.22);
+        }
+
+        /* Stat Counter Card */
+        .stat-card {
+            padding: 1.5rem;
+            text-align: center;
+            border-radius: 16px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+
+        /* Toast / Notification Styling */
+        .custom-toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            background: var(--bg-surface);
+            color: var(--text-main);
+            border: 1px solid var(--accent-emerald);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-radius: 12px;
+            backdrop-filter: blur(12px);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-base);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6366f1;
+        }
+    </style>
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#main-navbar" data-bs-offset="100">
 
-  <!-- Ambient Glow -->
-  <div class="bg-gradient-glow"></div>
+    <canvas id="particle-canvas"></canvas>
 
-  <!-- Header / Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light container">
-    <div class="container-fluid px-0">
-      <a class="navbar-brand" href="#">UK<span>.</span></a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-        </ul>
-      </div>
-      <div class="d-none d-lg-block">
-        <a href="#contact" class="btn btn-talk">Let's talk <i class="bi bi-arrow-up-right ms-1"></i></a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero / About Section -->
-  <section id="about" class="container py-5">
-    <div class="row align-items-center gy-5">
-      <div class="col-lg-7">
-        <h1 class="hero-heading mb-3">Hi, I'm <br><span>Ujjwal Kumar.</span></h1>
-        <p class="fw-semibold text-dark fs-5 mb-3">
-          Building Full Stack Applications &amp; Bridging the Gap Between Software Engineering and AI
-        </p>
-        <p class="hero-subtext mb-4 pe-lg-5">
-          Passionate Computer Science student focused on scalable web development, machine learning models, and data-driven solutions.
-        </p>
-        <div class="d-flex flex-wrap gap-3 align-items-center">
-          <a href="#projects" class="btn btn-orange">View my work <i class="bi bi-arrow-right ms-2"></i></a>
-          <a href="#skills" class="btn btn-outline-custom">Skills <i class="bi bi-code-slash ms-2"></i></a>
-        </div>
-      </div>
-      
-      <!-- Right Side Visual / Avatar -->
-      <div class="col-lg-5 text-center">
-        <div class="hero-img-wrapper">
-          <!-- Placeholder avatar image matching tone -->
-          <img src="https://avatars.githubusercontent.com/u/164533721?v=4" alt="Ujjwal Kumar" class="hero-img">
-          
-          <!-- Floating Status Card -->
-          <div class="status-card text-start">
-            <div class="status-badge">
-                Open to Software Engineering &amp; AI/ML opportunities.
+    <nav id="main-navbar" class="navbar navbar-expand-lg fixed-top glass-nav py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-gradient fs-4 d-flex align-items-center gap-2" href="#">
+                Ujjwal Kumar
+            </a>
+            
+            <div class="d-flex align-items-center gap-2 order-lg-3">
+                <!-- Theme Toggle Button -->
+                <button class="btn btn-glass p-2 px-3 d-flex align-items-center gap-2 rounded-pill" id="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon text-warning" id="theme-icon"></i>
+                    <span class="d-none d-md-inline fs-7" id="theme-text">Dark</span>
+                </button>
+                <button class="navbar-toggler btn-glass p-2 text-main" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars fs-5"></i>
+                </button>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Tech Skills Section -->
-  <section id="skills" class="container py-5">
-    <div class="section-tag">MY STACK</div>
-    <h2 class="section-title">Technical Expertise</h2>
-    
-    <div class="custom-card">
-      <div class="d-flex flex-wrap gap-2">
-        <span class="skill-pill">Java</span>
-        <span class="skill-pill">HTML5</span>
-        <span class="skill-pill">CSS3</span>
-        <span class="skill-pill">JavaScript</span>
-        <span class="skill-pill">Bootstrap</span>
-        <span class="skill-pill">MongoDB</span>
-        <span class="skill-pill">Express.js</span>
-        <span class="skill-pill">React.js</span>
-        <span class="skill-pill">Node.js</span>
-        <span class="skill-pill">Python</span>
-        <span class="skill-pill">NumPy</span>
-        <span class="skill-pill">Pandas</span>
-        <span class="skill-pill">Matplotlib</span>
-        <span class="skill-pill">Seaborn</span>
-        <span class="skill-pill">Scikit-Learn</span>
-        <span class="skill-pill">SQL</span>
-        <span class="skill-pill">Machine Learning</span>
-        <span class="skill-pill">Git</span>
-        <span class="skill-pill">GitHub</span>
-        <span class="skill-pill">VS Code</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="container py-5">
-    <div class="d-flex justify-content-between align-items-end mb-4">
-      <div>
-        <div class="section-tag">SELECTED WORK</div>
-        <h2 class="section-title mb-0">Featured Projects</h2>
-      </div>
-    </div>
-
-    <div class="row g-4">
-      <!-- Project 1 -->
-      <div class="col-lg-4 col-md-12">
-        <div class="custom-card h-100 d-flex flex-column justify-content-between">
-          <div>
-            <h4 class="fw-bold fs-5">Social Media Website</h4>
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <a href="https://github.com/ujjwalkumar14b/Social_Media" class="social-icon-btn"><i class="bi bi-github"></i></a>                
-              <a href="https://social-media-snowy-three.vercel.app/" class="social-icon-btn"><i class="bi bi-arrow-up-right"></i></a>
+            <div class="collapse navbar-collapse justify-content-center order-lg-2" id="navbarNav">
+                <ul class="navbar-nav gap-lg-2 mt-3 mt-lg-0 fw-medium">
+                    <li class="nav-item"><a class="nav-link px-3" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#achievements">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#contact">Contact</a></li>
+                </ul>
             </div>
-            <ul class="text-secondary small ps-3 mt-3">
-              <li>Built a full-stack MERN social media application supporting core CRUD workflows and RESTful architecture.</li>
-              <li>Developed reusable React components and client-side state management for optimal performance.</li>
-              <li>Implemented JWT-based authentication architecture with protected routes.</li>
-              <li>Established automated build verification and deployed on Vercel with GitHub CI/CD integration.</li>
-            </ul>
-          </div>
         </div>
-      </div>
+    </nav>
 
-      <!-- Project 2 -->
-      <div class="col-lg-4 col-md-12">
-        <div class="custom-card h-100 d-flex flex-column justify-content-between">
-          <div>
-            <h4 class="fw-bold fs-5">Product Recommendation System</h4>
-            <div class="d-flex justify-content-between align-items-start mb-3">
-               <a href="https://github.com/ujjwalkumar14b/Recommendation" class="social-icon-btn"><i class="bi bi-github"></i></a>
-               <a href="https://product-recommendation-k5r7.onrender.com/" class="social-icon-btn"><i class="bi bi-arrow-up-right"></i></a>
+    <main class="position-relative z-1">
+        <section id="hero" class="min-vh-100 d-flex align-items-center pt-5">
+            <div class="container py-5">
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-7">
+                        <div class="hero-glow"></div>
+                        <div class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill glass-card mb-3 border border-primary border-opacity-25">
+                            <span class="spinner-grow spinner-grow-sm text-success" role="status"></span>
+                            <span class="fs-7 fw-medium text-muted">Available for Software Engineering Roles</span>
+                        </div>
+                        <h1 class="display-3 fw-extrabold mb-2 text-main">
+                            Hi, I'm <span class="text-gradient">Ujjwal Kumar</span>
+                        </h1>
+                        <h2 class="h3 fw-semibold text-muted mb-4">
+                            I am a <span id="typed-text" class="text-cyan fw-bold"></span><span class="typing-cursor">&nbsp;</span>
+                        </h2>
+                        <p class="lead text-muted mb-4 pe-lg-4">
+                            Computer Science Engineer passionate about building scalable full-stack applications, machine learning pipelines, and algorithmic solutions with proven technical expertise.
+                        </p>
+                        
+                        <!-- CTA Buttons -->
+                        <div class="d-flex flex-wrap gap-3 mb-5">
+                            <a href="#contact" class="btn btn-gradient d-inline-flex align-items-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i> Get In Touch
+                            </a>
+                            <a href="#projects" class="btn btn-glass d-inline-flex align-items-center gap-2">
+                                <i class="fa-solid fa-laptop-code"></i> View Projects
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Floating Graphic & Cards -->
+                    <div class="col-lg-5">
+                        <div class="position-relative">
+                            <!-- Main Hero Card -->
+                            <div class="glass-card p-4 text-center floating-element">
+                                <div class="position-relative d-inline-block mb-3">
+                                    <div class="rounded-circle p-1 bg-gradient shadow-lg" style="background: var(--primary-gradient);">
+                                        <div class="rounded-circle bg-dark p-3 fs-1 text-gradient d-flex align-items-center justify-content-center" >
+                                            <img src="https://avatars.githubusercontent.com/u/164533721?v=4" alt="Ujjwal Kumar" style="width: 140px; height: 140px; border-radius: 50%;">
+                                        </div>
+                                    </div>
+                                    <span class="position-absolute bottom-0 end-0 p-2 bg-success border border-light rounded-circle">
+                                        <span class="visually-hidden">Online</span>
+                                    </span>
+                                </div>
+                                <h3 class="h4 fw-bold mb-2">Ujjwal Kumar</h3>
+                                
+                                <div class="d-flex justify-content-center gap-2 mb-3 flex-wrap">
+                                    <span class="tech-badge"><i class="fa-brands fa-react"></i> React</span>
+                                    <span class="tech-badge"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                                    <span class="tech-badge"><i class="fa-brands fa-python"></i> Python</span>
+                                    <span class="tech-badge"><i class="fa-solid fa-brain"></i> AI / ML</span>
+                                </div>
+
+                                <div class="p-3 glass-card bg-opacity-50 text-start font-mono fs-7 text-muted">
+                                    <div class="text-emerald">// Highlights</div>
+                                    <div>&gt; LeetCode: 400+ Problems</div>
+                                    <div>&gt; Academics: Top 1% Dean's List</div>
+                                    <div>&gt; Internships: 3 Completed</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <ul class="text-secondary small ps-3 mt-3">
-              <li>Developed a personalized product recommendation web app using Flask, HTML, CSS, and Bootstrap.</li>
-              <li>Implemented Popularity-Based, User-Based &amp; Item-Based Collaborative Filtering, TF-IDF Content-Based, and Hybrid approaches.</li>
-              <li>Built recommendation pipelines for 300K+ customer records with 97.68% data sparsity, achieving a 98.07% top-5 personalization metric.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+        </section>
 
-      <!-- Project 3 -->
-      <div class="col-lg-4 col-md-12">
-        <div class="custom-card h-100 d-flex flex-column justify-content-between">
-          <div>
-            <h4 class="fw-bold fs-5">Credit Card Fraud Detection</h4>
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <a href="https://github.com/ujjwalkumar14b/Credit_Card_Fraud_Detection" class="social-icon-btn"><i class="bi bi-github"></i></a>                
-              <a href="https://credit-card-fraud-detection-v4m8.onrender.com/" class="social-icon-btn"><i class="bi bi-arrow-up-right"></i></a>
+        <section id="about" class="py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">About <span class="text-gradient">Me</span></h2>
+                </div>
+
+                <div class="row g-4 align-items-stretch">
+                    <!-- Bio Overview -->
+                    <div class="col-lg-6">
+                        <div class="glass-card p-4 p-md-5 h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <h3 class="h4 fw-bold mb-3 d-flex align-items-center gap-2">
+                                    <i class="fa-solid fa-user-gear text-cyan"></i> Software Engineer & ML Enthusiast
+                                </h3>
+                                <p class="text-muted leading-relaxed">
+                                    I am currently pursuing my Bachelor of Technology in Computer Science & Engineering at Meerut Institute of Engineering and Technology. With a solid foundation in Data Structures, Algorithms, Full-Stack Web Development, and Data Science, I thrive on building end-to-end applications that solve real-world problems.
+                                </p>
+                                <p class="text-muted leading-relaxed">
+                                    My experience spans engineering high-throughput MERN stack web applications, optimizing time-series forecasting models, and implementing machine learning algorithms for predictive analysis and personalizations.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Cards -->
+                    <div class="col-lg-6">
+                        <div class="d-flex flex-column gap-4 h-100">
+                            <!-- B.Tech Card -->
+                            <div class="glass-card p-4 flex-grow-1 border-start border-4 border-primary">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge bg-primary bg-opacity-25 text-primary mb-2">Higher Education</span>
+                                        <h4 class="h5 fw-bold mb-1">B.Tech in Computer Science & Engineering</h4>
+                                        <p class="text-muted fs-7 mb-0">Meerut Institute of Engineering and Technology</p>
+                                    </div>
+                                    <span class="badge glass-card px-3 py-2 text-cyan font-mono fs-8">Aug 2023 - Jun 2027</span>
+                                </div>
+                            </div>
+
+                            <!-- Senior Secondary Card -->
+                            <div class="glass-card p-4 flex-grow-1 border-start border-4 border-info">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge bg-info bg-opacity-25 text-info mb-2">Senior Secondary</span>
+                                        <h4 class="h5 fw-bold mb-1">Senior Secondary Education (PCM)</h4>
+                                        <p class="text-muted fs-7 mb-0">Army Public School (APS), Meerut</p>
+                                    </div>
+                                    <span class="badge glass-card px-3 py-2 text-cyan font-mono fs-8">Mar 2021 - Jun 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <ul class="text-secondary small ps-3 mt-3">
-              <li>Developed an XGBoost Credit Card Fraud Detection pipeline on 778K+ financial transactions.</li>
-              <li>Applied temporal, demographic, categorical, and geospatial feature engineering, including transaction time, customer age, and Haversine distance.</li>
-              <li>Addressed severe class imbalance using weighted XGBoost training, achieving 95% fraud recall and 0.9151 PR-AUC.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </section>
 
-  <!-- Experience & Education Combined Section -->
-  <section id="experience" class="container py-5">
-    <div class="row g-5">
-      <!-- Experience Column -->
-      <div class="col-lg-7">
-        <div class="section-tag">CAREER HISTORY</div>
-        <h2 class="section-title">Experience</h2>
+        <section id="skills" class="py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Technical <span class="text-gradient">Skills</span></h2>
+                    
+                    <!-- Skill Filter Navigation -->
+                    
+                </div>
 
-        <div class="ps-2">
-          <!-- Exp 1 -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="d-flex justify-content-between align-items-center mb-1">
-              <h5 class="fw-bold mb-0">AI-ML Intern</h5>
-              <span class="text-muted small">Jul 2026 - Aug 2026</span>
+                <div class="tab-content" id="skillTabsContent">
+                    <!-- Tab: ALL -->
+                    <div class="tab-pane fade show active" id="tab-all" role="tabpanel">
+                        <div class="row g-4">
+                            <!-- Languages -->
+                            <div class="col-md-6 col-lg-3">
+                                <div class="glass-card p-4 h-100">
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div class="p-3 rounded-3 bg-primary bg-opacity-10 text-primary fs-4">
+                                            <i class="fa-solid fa-code"></i>
+                                        </div>
+                                        <h3 class="h5 fw-bold mb-0">Languages</h3>
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="tech-badge"><i class="fa-brands fa-java text-danger"></i> Java</span>
+                                        <span class="tech-badge"><i class="fa-brands fa-python text-warning"></i> Python</span>
+                                        <span class="tech-badge"><i class="fa-brands fa-js text-warning"></i> JavaScript</span>
+                                        <span class="tech-badge"><i class="fa-brands fa-html5 text-danger"></i> HTML5</span>
+                                        <span class="tech-badge"><i class="fa-brands fa-css3-alt text-primary"></i> CSS3</span>
+                                        <span class="tech-badge"><i class="fa-solid fa-database text-info"></i> SQL</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Web Dev -->
+                            <div class="col-md-6 col-lg-3">
+                                <div class="glass-card p-4 h-100">
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div class="p-3 rounded-3 bg-success bg-opacity-10 text-success fs-4">
+                                            <i class="fa-solid fa-layer-group"></i>
+                                        </div>
+                                        <h3 class="h5 fw-bold mb-0">Development</h3>
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="tech-badge"><i class="fa-brands fa-react text-info"></i> React.js</span>
+                                        <span class="tech-badge"><i class="fa-brands fa-node-js text-success"></i> Node.js</span>
+                                        <span class="tech-badge"><i class="fa-solid fa-server text-secondary"></i> Express.js</span>
+                                        <span class="tech-badge"><i class="fa-solid fa-leaf text-success"></i> MongoDB</span>
+                                        <span class="tech-badge"><i class="fa-solid fa-network-wired text-primary"></i> REST APIs</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Data Science -->
+                            <div class="col-md-6 col-lg-3">
+                                <div class="glass-card p-4 h-100">
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div class="p-3 rounded-3 bg-info bg-opacity-10 text-info fs-4">
+                                            <i class="fa-solid fa-chart-line"></i>
+                                        </div>
+                                        <h3 class="h5 fw-bold mb-0">Data Science</h3>
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="tech-badge"><i class="fa-solid fa-square-root-variable"></i> NumPy</span>
+                                        <span class="tech-badge"><i class="fa-solid fa-table"></i> Pandas</span>
+                                        <span class="tech-badge"><i class="fa-solid fa-chart-pie"></i> Matplotlib</span>
+                                        <span class="tech-badge"><i class="fa-solid fa-chart-bar"></i> Seaborn</span>
+                                        <span class="tech-badge"><i class="fa-solid fa-brain"></i> Scikit-Learn</span>
+                                        <span class="tech-badge"><i class="fa-solid fa-calculator"></i> Statsmodels</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tools -->
+                            <div class="col-md-6 col-lg-3">
+                                <div class="glass-card p-4 h-100">
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div class="p-3 rounded-3 bg-warning bg-opacity-10 text-warning fs-4">
+                                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                                        </div>
+                                        <h3 class="h5 fw-bold mb-0">Tools & DevOps</h3>
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="tech-badge"><i class="fa-brands fa-git-alt text-danger"></i> Git</span>
+                                        <span class="tech-badge"><i class="fa-brands fa-github"></i> GitHub</span>
+                                        <span class="tech-badge"><i class="fa-solid fa-book-open text-warning"></i> Jupyter</span>
+                                        <span class="tech-badge"><i class="fa-solid fa-code text-primary"></i> VS Code</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
             </div>
-            <p class="text-danger fw-semibold small mb-2">Codomax Digital Solutions | Remote</p>
-            <ul class="text-secondary small ps-3">
-              <li>Engineered Time Series Forecasting pipeline for 80 quarterly power-consumption observations (2001–2020) using Python, Pandas, and Statsmodels.</li>
-              <li>Performed EDA, rolling-window analysis, seasonal decomposition, ADF testing (p=0.9986) and implemented Holt-Winters Exponential Smoothing.</li>
-            </ul>
-          </div>
+        </section>
 
-          <!-- Exp 2 -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="d-flex justify-content-between align-items-center mb-1">
-              <h5 class="fw-bold mb-0">Data Science Intern</h5>
-              <span class="text-muted small">Nov 2025 - Jan 2026</span>
+        <section id="experience" class="py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Work <span class="text-gradient">Experience</span></h2>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="timeline-container">
+                            
+                            <!-- Experience 1 -->
+                            <div class="timeline-item">
+                                <div class="glass-card p-4">
+                                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-3">
+                                        <div>
+                                            <span class="badge bg-primary bg-opacity-25 text-primary mb-2">AI-ML Internship</span>
+                                            <h3 class="h4 fw-bold mb-1">AI-ML Intern</h3>
+                                            <h4 class="h6 text-cyan mb-0">Codomax Digital Solutions</h4>
+                                        </div>
+                                        <span class="badge glass-card px-3 py-2 text-muted font-mono fs-8">Jul 2026 – Aug 2026</span>
+                                    </div>
+                                    <ul class="text-muted fs-7 leading-relaxed mb-3 ps-3">
+                                        <li>Engineered an end-to-end Time Series Forecasting pipeline for 80 quarterly power-consumption observations (2001–2020) utilizing Python, Pandas, and Statsmodels, generating 8-quarter out-of-sample forecasts to support energy-demand prediction.</li>
+                                        <li>Performed extensive time-series EDA, rolling-window analysis, seasonal decomposition, and ADF stationarity testing (p=0.9986).</li>
+                                        <li>Implemented Holt-Winters Exponential Smoothing with additive trend and quarterly seasonality to optimize prediction metrics.</li>
+                                    </ul>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="tech-badge">Python</span>
+                                        <span class="tech-badge">Pandas</span>
+                                        <span class="tech-badge">Statsmodels</span>
+                                        <span class="tech-badge">Holt-Winters</span>
+                                        <span class="tech-badge">Time Series</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Experience 2 -->
+                            <div class="timeline-item">
+                                <div class="glass-card p-4">
+                                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-3">
+                                        <div>
+                                            <span class="badge bg-info bg-opacity-25 text-info mb-2">Data Analytics</span>
+                                            <h3 class="h4 fw-bold mb-1">Data Science Intern</h3>
+                                            <h4 class="h6 text-cyan mb-0">AISECT LEARN</h4>
+                                        </div>
+                                        <span class="badge glass-card px-3 py-2 text-muted font-mono fs-8">Nov 2025 – Jan 2026</span>
+                                    </div>
+                                    <ul class="text-muted fs-7 leading-relaxed mb-3 ps-3">
+                                        <li>Identified user segment dynamics by clustering users into 4 distinct behavioral groups using unsupervised K-Means Clustering.</li>
+                                        <li>Identified a 59.1% churn rate in the High-Risk Spenders segment by developing supervised predictive models using Logistic Regression.</li>
+                                        <li>Delivered actionable behavioral insights for business strategies to increase user retention.</li>
+                                    </ul>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="tech-badge">K-Means Clustering</span>
+                                        <span class="tech-badge">Logistic Regression</span>
+                                        <span class="tech-badge">Scikit-Learn</span>
+                                        <span class="tech-badge">Customer Segmentation</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Experience 3 -->
+                            <div class="timeline-item">
+                                <div class="glass-card p-4">
+                                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-3">
+                                        <div>
+                                            <span class="badge bg-success bg-opacity-25 text-success mb-2">Full Stack Engineering</span>
+                                            <h3 class="h4 fw-bold mb-1">Full Stack Developer Intern</h3>
+                                            <h4 class="h6 text-cyan mb-0">EduSkills Foundation</h4>
+                                        </div>
+                                        <span class="badge glass-card px-3 py-2 text-muted font-mono fs-8">Oct 2024 – Dec 2024</span>
+                                    </div>
+                                    <ul class="text-muted fs-7 leading-relaxed mb-3 ps-3">
+                                        <li>Engineered a production-ready full-stack social media application utilizing React, Node.js, Express, and MongoDB to support user authentication, feed management, and complete CRUD content operations for 100% of platform posts.</li>
+                                        <li>Implemented role-based access control (RBAC) and admin moderation tools leveraging JWT authentication and protected client-side routes, cutting unauthorized access attempts to 0%.</li>
+                                    </ul>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="tech-badge">React.js</span>
+                                        <span class="tech-badge">Node.js</span>
+                                        <span class="tech-badge">Express.js</span>
+                                        <span class="tech-badge">MongoDB</span>
+                                        <span class="tech-badge">JWT & RBAC</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p class="text-danger fw-semibold small mb-2">AISECT LEARN | Remote</p>
-            <ul class="text-secondary small ps-3">
-              <li>Worked on customer segmentation and churn prediction using supervised and unsupervised learning.</li>
-              <li>Segmented customers into 4 behavioral groups using K-Means Clustering to identify high-value segments.</li>
-              <li>Identified 59.1% churn rate of High-Risk Spenders segment using Random Forest and Logistic Regression.</li>
-            </ul>
-          </div>
+        </section>
 
-          <!-- Exp 3 -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="d-flex justify-content-between align-items-center mb-1">
-              <h5 class="fw-bold mb-0">Python Full Stack Developer</h5>
-              <span class="text-muted small">Oct 2024 - Dec 2024</span>
+        <section id="projects" class="py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Project 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="glass-card h-100 d-flex flex-column overflow-hidden">
+                            <div class="p-4 flex-grow-1">
+                                <h3 class="h4 fw-bold mb-2">Video Conferencing Application</h3>
+                                <p class="text-muted fs-7 leading-relaxed mb-3">
+                                    Architected a real-time video conferencing application delivering low-latency peer-to-peer audio/video streaming and instant messaging across 100% of active sessions. Engineered scalable backend RESTful APIs with JWT/Bcrypt authentication.
+                                </p>
+                            </div>
+                            <div class="p-4 pt-0">
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="tech-badge">WebRTC</span>
+                                    <span class="tech-badge">Socket.IO</span>
+                                    <span class="tech-badge">Node.js</span>
+                                    <span class="tech-badge">Express</span>
+                                    <span class="tech-badge">MongoDB</span>
+                                </div>
+                                <div class="d-flex gap-2 pt-3 border-top border-secondary border-opacity-25">
+                                    <a href="https://github.com/ujjwalkumar14b/Zoom" target="_blank" class="btn btn-glass btn-sm w-100 d-flex align-items-center justify-content-center gap-2">
+                                        <i class="fa-brands fa-github"></i> Code Repository
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="glass-card h-100 d-flex flex-column overflow-hidden">
+                            <div class="p-4 flex-grow-1">
+                                <h3 class="h4 fw-bold mb-2">Stock Trading Application</h3>
+                                <p class="text-muted fs-7 leading-relaxed mb-3">
+                                    Full-stack trading application serving multi-tier workflows across 3 distinct services using Passport.js authentication. Accelerated UI responsiveness by 25% across portfolio views using React, Material UI, Chart.js, and Axios.
+                                </p>
+                            </div>
+                            <div class="p-4 pt-0">
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="tech-badge">React</span>
+                                    <span class="tech-badge">Material UI</span>
+                                    <span class="tech-badge">Chart.js</span>
+                                    <span class="tech-badge">Node.js</span>
+                                    <span class="tech-badge">Passport.js</span>
+                                </div>
+                                <div class="d-flex gap-2 pt-3 border-top border-secondary border-opacity-25">
+                                    <a href="https://github.com/ujjwalkumar14b/Zerodha" target="_blank" class="btn btn-glass btn-sm w-100 d-flex align-items-center justify-content-center gap-2">
+                                        <i class="fa-brands fa-github"></i> Code Repository
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="glass-card h-100 d-flex flex-column overflow-hidden">
+                            <div class="p-4 flex-grow-1">
+                                <h3 class="h4 fw-bold mb-2">Product Recommendation System</h3>
+                                <p class="text-muted fs-7 leading-relaxed mb-3">
+                                    Developed a hybrid model with 90.14% personalization accuracy, combining Popularity-Based, Neural Collaborative, and Content-Based Filtering with Explainable AI. Addressed 97.68% user-item sparsity on a 300K+ customer purchase dataset.
+                                </p>
+                            </div>
+                            <div class="p-4 pt-0">
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">Neural Filtering</span>
+                                    <span class="tech-badge">Explainable AI</span>
+                                    <span class="tech-badge">Scikit-Learn</span>
+                                    <span class="tech-badge">Pandas</span>
+                                </div>
+                                <div class="d-flex gap-2 pt-3 border-top border-secondary border-opacity-25">
+                                    <a href="https://github.com/ujjwalkumar14b/Recommendation" target="_blank" class="btn btn-glass btn-sm w-100 d-flex align-items-center justify-content-center gap-2">
+                                        <i class="fa-brands fa-github"></i> Code Repository
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p class="text-danger fw-semibold small mb-2">EduSkills Foundation | Remote</p>
-            <ul class="text-secondary small ps-3">
-              <li>Created a responsive full-stack web application using HTML5, CSS3, Bootstrap, Flask, and SQL.</li>
-              <li>Implemented structured database queries and leveraged Git &amp; GitHub for collaborative development.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+        </section>
 
-      <!-- Education Column -->
-      <div class="col-lg-5" id="education">
-        <div class="section-tag">BACKGROUND</div>
-        <h2 class="section-title">Education</h2>
+        <section id="achievements" class="py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Honors & <span class="text-gradient">Achievements</span></h2>
+                </div>
 
-        <div class="custom-card mb-4">
-          <span class="badge bg-white text-dark rounded-pill px-3 py-1 border mb-2">Aug 2023 - Jun 2027</span>
-          <h5 class="fw-bold mb-1">B.Tech CSE</h5>
-          <p class="text-secondary mb-0 small">MIET, Meerut</p>
-        </div>
+                <div class="row g-4 justify-content-center">
+                    <!-- Achievement 1 -->
+                    <div class="col-md-6 col-lg-5">
+                        <div class="glass-card p-4 d-flex align-items-start gap-4 h-100">
+                            <div class="p-3 rounded-circle bg-warning bg-opacity-10 text-warning fs-2 flex-shrink-0">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div>
+                                <h3 class="h5 fw-bold mb-1">400+ LeetCode Problems Solved</h3>
+                                <p class="text-muted fs-7 mb-2">Strengthened proficiency in Data Structures, Algorithms, Dynamic Programming, Graphs, and System Design concepts.</p>
+                                <a href="https://leetcode.com" target="_blank" class="text-cyan text-decoration-none fs-7 fw-semibold">View LeetCode Profile <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="custom-card">
-          <span class="badge bg-white text-dark rounded-pill px-3 py-1 border mb-2">Mar 2021 - Jun 2023</span>
-          <h5 class="fw-bold mb-1">Intermediate</h5>
-          <p class="text-secondary mb-0 small">APS, Meerut</p>
-        </div>
-      </div>
-    </div>
-  </section>
+                    <!-- Achievement 2 -->
+                    <div class="col-md-6 col-lg-5">
+                        <div class="glass-card p-4 d-flex align-items-start gap-4 h-100">
+                            <div class="p-3 rounded-circle bg-success bg-opacity-10 text-success fs-2 flex-shrink-0">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <h3 class="h5 fw-bold mb-1">Dean's List (Top 1% Rank)</h3>
+                                <p class="text-muted fs-7 mb-2">Ranked among the top 1% of engineering students at Meerut Institute of Engineering and Technology for academic year 2023–24.</p>
+                                <span class="badge bg-success bg-opacity-25 text-success fs-8">Academic Excellence</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Footer / Contact -->
-  <footer id="contact" class="container mt-5">
-    <div class="row align-items-center gy-4">
-      <div class="col-md-6">
-        <h3 class="fw-bold mb-2">Let's create something<br>amazing together.</h3>
-      </div>
-      <div class="col-md-6 text-md-end">
-        <div class="mb-3">
-          <a href="mailto:ujjwalkumar@example.com" class="text-decoration-none text-dark fw-semibold me-3">hello@ujjwal.dev</a>
-        </div>
-        <div>
-          <a href="https://linkedin.com/in/ujjwalkumar14b" class="social-icon-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-          <a href="https://github.com/ujjwalkumar14b" class="social-icon-btn" aria-label="GitHub"><i class="bi bi-github"></i></a>
-          <a href="tel:+918627041624" class="social-icon-btn" aria-label="Phone Call"><i class="bi bi-telephone" aria-hidden="true"></i></a>
-          <a href="mailto:ujjwalkumar14b@gmail.com" class="social-icon-btn" aria-label="Send Email"><i class="bi bi-envelope" aria-hidden="true"></i></a>
-        </div>
-      </div>
-    </div>
-  </footer>
+        <section id="contact" class="py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Get In <span class="text-gradient">Touch</span></h2>
+                </div>
 
-  <!-- Bootstrap 5 JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+                <div class="row g-4 justify-content-center">
+                    <!-- Contact Info Cards -->
+                    <div class="col-lg-4">
+                        <div class="d-flex flex-column gap-3">
+                            <div class="glass-card p-4 d-flex align-items-center gap-3">
+                                <div class="p-3 rounded-3 bg-primary bg-opacity-10 text-primary fs-4">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <div class="text-muted fs-8 text-uppercase fw-semibold">Email</div>
+                                    <a href="mailto:ujjwalkumar14b@gmail.com" class="fw-bold text-main text-decoration-none text-truncate d-block">ujjwalkumar14b@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="glass-card p-4 d-flex align-items-center gap-3">
+                                <div class="p-3 rounded-3 bg-success bg-opacity-10 text-success fs-4">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <div class="text-muted fs-8 text-uppercase fw-semibold">Phone</div>
+                                    <a href="tel:+918627041624" class="fw-bold text-main text-decoration-none">+91 8627041624</a>
+                                </div>
+                            </div>
+
+                            <div class="glass-card p-4 d-flex align-items-center gap-3">
+                                <div class="p-3 rounded-3 bg-info bg-opacity-10 text-info fs-4">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <div class="text-muted fs-8 text-uppercase fw-semibold">Location</div>
+                                    <div class="fw-bold text-main">Meerut, Uttar Pradesh, India</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Contact Form -->
+                    <div class="col-lg-6">
+                        <div class="glass-card p-4 p-md-5">
+                            <form id="portfolio-contact-form">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label fs-7 fw-semibold text-muted">Your Name</label>
+                                    <input type="text" class="form-label form-control bg-dark text-white border-secondary border-opacity-50 p-3 rounded-3" id="name" placeholder="John Doe" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label fs-7 fw-semibold text-muted">Your Email</label>
+                                    <input type="email" class="form-label form-control bg-dark text-white border-secondary border-opacity-50 p-3 rounded-3" id="email" placeholder="john@example.com" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label fs-7 fw-semibold text-muted">Message</label>
+                                    <textarea class="form-control bg-dark text-white border-secondary border-opacity-50 p-3 rounded-3" id="message" rows="4" placeholder="Hello Ujjwal, I would like to connect with you regarding..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-gradient w-100 py-3 d-flex align-items-center justify-content-center gap-2">
+                                    <i class="fa-solid fa-paper-plane"></i> Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-nav py-4 mt-5">
+        <div class="container text-center">
+            <div class="d-flex justify-content-center gap-3 mb-3">
+                <a href="https://linkedin.com/in/ujjwalkumar14b" target="_blank" class="btn btn-glass p-2 px-3 rounded-circle" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/ujjwalkumar14b" target="_blank" class="btn btn-glass p-2 px-3 rounded-circle" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://leetcode.com/u/ujjwalkumar14b" target="_blank" class="btn btn-glass p-2 px-3 rounded-circle" title="LeetCode"><i class="fa-solid fa-code"></i></a>
+                <a href="mailto:ujjwalkumar14b@gmail.com" class="btn btn-glass p-2 px-3 rounded-circle" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <p class="text-muted fs-7 mb-0">
+                Designed & Built by <span class="text-gradient fw-bold">Ujjwal Kumar</span> &copy; 2026. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeText = document.getElementById('theme-text');
+        const htmlElement = document.documentElement;
+
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-bs-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            htmlElement.setAttribute('data-bs-theme', newTheme);
+
+            if (newTheme === 'dark') {
+                themeIcon.className = 'fa-solid fa-moon text-warning';
+                themeText.textContent = 'Dark';
+            } else {
+                themeIcon.className = 'fa-solid fa-sun text-warning';
+                themeText.textContent = 'Light';
+            }
+        });
+
+        const roles = ["Full Stack Developer", "Data Scientist / AI-ML Specialist", "MERN Stack Engineer", "Problem Solver"];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typedTextElement = document.getElementById("typed-text");
+
+        function typeEffect() {
+            const currentRole = roles[roleIndex];
+            
+            if (isDeleting) {
+                typedTextElement.textContent = currentRole.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typedTextElement.textContent = currentRole.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 40 : 80;
+
+            if (!isDeleting && charIndex === currentRole.length) {
+                typeSpeed = 2000; // Pause at full word
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(typeEffect, typeSpeed);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            typeEffect();
+            initParticles();
+        });
+
+
+        function showToast(msg) {
+            const toast = document.createElement("div");
+            toast.className = "custom-toast p-3 d-flex align-items-center gap-2";
+            toast.innerHTML = `<i class="fa-solid fa-circle-check text-emerald fs-5"></i> <span>${msg}</span>`;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transition = 'opacity 0.5s ease';
+                setTimeout(() => toast.remove(), 500);
+            }, 3000);
+        }
+
+        document.getElementById('portfolio-contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            showToast(`Thank you, ${name}! Your message has been sent successfully.`);
+            this.reset();
+        });
+
+        function initParticles() {
+            const canvas = document.getElementById('particle-canvas');
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+
+            class Particle {
+                constructor() {
+                    this.reset();
+                }
+
+                reset() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.size = Math.random() * 2 + 1;
+                    this.speedX = (Math.random() - 0.5) * 0.5;
+                    this.speedY = (Math.random() - 0.5) * 0.5;
+                    this.alpha = Math.random() * 0.5 + 0.2;
+                }
+
+                update() {
+                    this.x += this.speedX;
+                    this.y += this.speedY;
+
+                    if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+                        this.reset();
+                    }
+                }
+
+                draw() {
+                    ctx.fillStyle = `rgba(99, 102, 241, ${this.alpha})`;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+
+            for (let i = 0; i < 50; i++) {
+                particles.push(new Particle());
+            }
+
+            function animateParticles() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => {
+                    p.update();
+                    p.draw();
+                });
+                requestAnimationFrame(animateParticles);
+            }
+
+            animateParticles();
+        }
+    </script>
 </body>
 </html>
